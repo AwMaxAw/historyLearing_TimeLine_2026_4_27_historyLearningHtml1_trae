@@ -214,40 +214,6 @@ footer {
     opacity: 0.9;
 }
 
-.detail-node {
-    position: relative;
-    width: 78%;
-    margin: 1.2rem auto;
-    background-color: var(--white);
-    color: var(--secondary-blue);
-    padding: 0.9rem 1rem;
-    border-radius: 10px;
-    text-align: center;
-    z-index: 3;
-    border: 1px dashed var(--exam-point-border);
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    clear: both;
-}
-
-.detail-year {
-    display: inline-block;
-    font-weight: 700;
-    color: var(--accent-blue);
-    font-size: 0.9rem;
-    margin-right: 0.4rem;
-}
-
-.detail-title {
-    font-weight: 600;
-    font-size: 0.95rem;
-}
-
-.detail-text {
-    margin-top: 0.4rem;
-    font-size: 0.85rem;
-    color: var(--dark-gray);
-}
-
 /* 响应式设计 */
 @media (max-width: 768px) {
     .timeline-line {
@@ -261,11 +227,6 @@ footer {
     }
 
     .summary-node {
-        width: calc(100% - 60px);
-        margin-left: 60px;
-    }
-
-    .detail-node {
         width: calc(100% - 60px);
         margin-left: 60px;
     }

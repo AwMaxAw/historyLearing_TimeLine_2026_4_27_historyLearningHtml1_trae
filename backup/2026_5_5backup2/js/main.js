@@ -22,15 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p>${event.content}</p>
                     </div>
                 `;
-            } else if (event.type === 'detail') {
-                card.className = `detail-node`;
-                card.innerHTML = `
-                    <div class="detail-inner">
-                        ${event.year ? `<span class="detail-year">${event.year}</span>` : ''}
-                        <span class="detail-title">${event.title}</span>
-                        ${event.text ? `<p class="detail-text">${event.text}</p>` : ''}
-                    </div>
-                `;
             } else {
                 const side = eventCount % 2 === 0 ? 'left' : 'right';
                 eventCount++;
@@ -86,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     // 监听所有卡片和总结节点
-    document.querySelectorAll('.event-card, .summary-node, .detail-node').forEach(node => {
+    document.querySelectorAll('.event-card, .summary-node').forEach(node => {
         node.style.opacity = '0';
         node.style.transform = 'translateY(20px)';
         node.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
